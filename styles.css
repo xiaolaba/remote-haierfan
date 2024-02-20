@@ -24,8 +24,8 @@ body, html {
 }
 
 button {
-  width: 60px; /* Set the width of the button */
-  height: 60px; /* Set the height of the button */
+  width: 40px; /* Set the width of the button */
+  height: 40px; /* Set the height of the button */
   display: block;
   margin-bottom: 10px;
 //
@@ -37,10 +37,10 @@ button {
   text-align: center;
   text-decoration: none;
 //  display: inline-block;
-  font-size: 20px;
+  font-size: 10px;
   margin: 10px 10px;
   cursor: pointer;
-  border-radius: 30px;  
+  border-radius: 20px;  
   
 }
 
