@@ -19,8 +19,8 @@ body, html {
 #buttons {
   position: absolute;
   top: 0%;
-  left: 40%;
-  transform: translate(0%, 0%);
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
 
 button {
@@ -37,7 +37,7 @@ button {
   text-align: center;
   text-decoration: none;
 //  display: inline-block;
-  font-size: 20px;
+  font-size: 10px;
   margin: 10px 10px;
   cursor: pointer;
   border-radius: 20px;  
