@@ -1,6 +1,11 @@
 # HaierFan_IR_Remote
 webpage of Haier remote control for cell phone, play wave file of IR signal, phone jack output to to drive &amp; emits IR signal  
 
+https://xiaolaba.github.io/HaierFan_IR_Remote/
+
+
+
+
 To host your HTML file along with its associated CSS file on GitHub Pages, you need to follow these steps:
     Create a GitHub Repository:
         If you haven't already, create a new repository on GitHub.
