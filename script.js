@@ -1,8 +1,6 @@
-function playAudio(audioId) {
-  var audio = document.getElementById(audioId);
+function playAudio(audioFileName) {
+  var audio = new Audio(audioFileName);
   audio.play();
-  // JavaScript to display information
-  alert("button is clicked");
 
 // Remove the information div after a few seconds
 setTimeout(function() {
