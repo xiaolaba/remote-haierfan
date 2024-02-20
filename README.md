@@ -3,6 +3,8 @@ webpage of Haier remote control for cell phone, play wave file of IR signal, pho
 
 https://xiaolaba.github.io/HaierFan_IR_Remote/
 
+![website_outline.JPG](website_outline.JPG)  
+
 
 
 
