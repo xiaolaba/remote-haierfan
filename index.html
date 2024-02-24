@@ -3,71 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>海爾暖風機遙控器 v2</title>
-<style>
-  .remote-container {
-    position: relative;
-    width: 200px; /* Adjust according to your image size */
-    margin: 0 auto;
-  }
+<title>海爾暖風機遙控器 v3</title>
+<link rel="stylesheet" href="styles.css">
 
-  .remote-image {
-    display: block;
-    width: 100%;
-  }
-
-  .audio-button {
-    position: absolute;
-    border-radius: 50%;
-    background-color: yellow; /* Change button color to green */
-    width: 20px; /* Adjust button size */
-    height: 20px; /* Adjust button size */
-    border: none;
-    cursor: pointer;
-    /* Adjust content alignment to center */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; /* Ensure buttons are above the image */
-  }
-
-  /* Adjust the position of each button */
-  .audio-button-1 {
-    top: 80px;
-    left: 52px;
-  }
-
-  .audio-button-2 {
-    top: 130px;
-    left: 52px;
-  }
-
-  .audio-button-3 {
-    top: 130px;
-    left: 106px;
-  }
-
-  .audio-button-4 {
-    top: 180px;
-    left: 52px;
-  }
-
-  .audio-button-5 {
-    top: 180px;
-    left: 79px;
-  }
-
-  .audio-button-6 {
-    top: 180px;
-    left: 108px;
-  }
-  
-  .audio-button-7 {
-    top: 6px;
-    left: 79px;
-  }
-  
-</style>
 </head>
 <body>
 <div style="text-align:center">
@@ -83,19 +21,15 @@ click Yellow buttons
   <button class="audio-button audio-button-4" onclick="playSound('4.wav')">4</button>
   <button class="audio-button audio-button-5" onclick="playSound('5.wav')">5</button>
   <button class="audio-button audio-button-6" onclick="playSound('6.wav')">6</button>
-  <button class="audio-button audio-button-7" onclick="playSound('hello.wav')">hello haier</button>  
+  <button class="audio-button audio-button-7" onclick="playSound('hello.wav')">hello</button>  
 </div>
 
 <audio id="audioPlayer" preload="auto">
   <source src="" type="audio/wav">
 </audio>
 
-<script>
-  function playSound(soundFile) {
-    const audioPlayer = document.getElementById('audioPlayer');
-    audioPlayer.src = soundFile;
-    audioPlayer.play();
-  }
-</script>
+<script src="script.js"></script>
+
+
 </body>
 </html>
