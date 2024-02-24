@@ -1,51 +1,101 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>海爾暖風機遙控器</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海爾暖風機遙控器 v2</title>
+<style>
+  .remote-container {
+    position: relative;
+    width: 200px; /* Adjust according to your image size */
+    margin: 0 auto;
+  }
+
+  .remote-image {
+    display: block;
+    width: 100%;
+  }
+
+  .audio-button {
+    position: absolute;
+    border-radius: 50%;
+    background-color: yellow; /* Change button color to green */
+    width: 20px; /* Adjust button size */
+    height: 20px; /* Adjust button size */
+    border: none;
+    cursor: pointer;
+    /* Adjust content alignment to center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure buttons are above the image */
+  }
+
+  /* Adjust the position of each button */
+  .audio-button-1 {
+    top: 80px;
+    left: 52px;
+  }
+
+  .audio-button-2 {
+    top: 130px;
+    left: 52px;
+  }
+
+  .audio-button-3 {
+    top: 130px;
+    left: 106px;
+  }
+
+  .audio-button-4 {
+    top: 180px;
+    left: 52px;
+  }
+
+  .audio-button-5 {
+    top: 180px;
+    left: 79px;
+  }
+
+  .audio-button-6 {
+    top: 180px;
+    left: 108px;
+  }
+  
+  .audio-button-7 {
+    top: 280px;
+    left: 79px;
+  }
+  
+</style>
 </head>
 <body>
-  <div id="container">
-      <img src="haier.jpg" alt="Photo" id="photo">
-  <table id="buttons">
-    <tr>
-      <td><button onclick="playAudio('1.wav')">Button 1</button></td>
-    </tr>
-    <tr>
-      <td><button onclick="playAudio('2.wav')">Button 2</button></td>
-      <td></td>	  
-      <td><button onclick="playAudio('3.wav')">Button 3</button></td>
-
-    </tr>
-    <tr>
-      <td><button onclick="playAudio('4.wav')">Button 4</button></td>	
-      <td><button onclick="playAudio('5.wav')">Button 5</button></td>
-      <td><button onclick="playAudio('6.wav')">Button 6</button></td>
-    </tr>
-	<tr>
-      <td></td>
-	  <td><button onclick="playAudio('hello.wav')">Hello海爾</button></td>
-	  <a id="info">海爾暖風機遙控器.</a>	  
-      <td></td>
-    </tr>
-	<tr>
-
-    </tr>
-  </table>
-	  
+<div style="text-align:center">
+click Yellow buttons
+</div>
 
 
+<div class="remote-container">
+  <img src="haier.jpg" alt="Remote Control" class="remote-image">
+  <button class="audio-button audio-button-1" onclick="playSound('1.wav')">1</button>
+  <button class="audio-button audio-button-2" onclick="playSound('2.wav')">2</button>
+  <button class="audio-button audio-button-3" onclick="playSound('3.wav')">3</button>
+  <button class="audio-button audio-button-4" onclick="playSound('4.wav')">4</button>
+  <button class="audio-button audio-button-5" onclick="playSound('5.wav')">5</button>
+  <button class="audio-button audio-button-6" onclick="playSound('6.wav')">6</button>
+  <button class="audio-button audio-button-7" onclick="playSound('hello.wav')">hello</button>  
+</div>
 
-  </div>
-  <script src="script.js"></script>
+<audio id="audioPlayer" preload="auto">
+  <source src="" type="audio/wav">
+</audio>
 
-
-
-
-
-
-
+<script>
+  function playSound(soundFile) {
+    const audioPlayer = document.getElementById('audioPlayer');
+    audioPlayer.src = soundFile;
+    audioPlayer.play();
+  }
+</script>
 </body>
 </html>
