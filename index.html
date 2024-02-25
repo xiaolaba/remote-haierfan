@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>海爾暖風機遙控器 v3</title>
-
-<link rel="stylesheet" type="text/css" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海爾暖風機遙控器</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="text-align:center">
-click Yellow buttons
-</div>
+  <div id="container">
+      <img src="haier.jpg" alt="Photo" id="photo">
+  <table id="buttons">
+    <tr>
+      <td><button onclick="playAudio('1-modulated_親嘴不要臉.wav')">Button 1</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="playAudio('2-modulated_親嘴不要臉.wav')">Button 2</button></td>
+      <td></td>	  
+      <td><button onclick="playAudio('3-modulated_親嘴不要臉.wav')">Button 3</button></td>
+
+    </tr>
+    <tr>
+      <td><button onclick="playAudio('4-modulated_親嘴不要臉.wav')">Button 4</button></td>	
+      <td><button onclick="playAudio('5-modulated_親嘴不要臉.wav')">Button 5</button></td>
+      <td><button onclick="playAudio('6-modulated_親嘴不要臉.wav')">Button 6</button></td>
+    </tr>
+	<tr>
+      <td></td>
+	  <td><button onclick="playAudio('hello.wav')">Hello海爾</button></td>
+	  <a id="info">海爾暖風機遙控器.</a>	  
+      <td></td>
+    </tr>
+	<tr>
+
+    </tr>
+  </table>
+	  
 
 
-<div class="remote-container">
-  <img src="haier.jpg" alt="Remote Control" class="remote-image">
-  <button class="audio-button audio-button-1" onclick="playSound('1.wav')">1</button>
-  <button class="audio-button audio-button-2" onclick="playSound('2.wav')">2</button>
-  <button class="audio-button audio-button-3" onclick="playSound('3.wav')">3</button>
-  <button class="audio-button audio-button-4" onclick="playSound('4.wav')">4</button>
-  <button class="audio-button audio-button-5" onclick="playSound('5.wav')">5</button>
-  <button class="audio-button audio-button-6" onclick="playSound('6.wav')">6</button>
-  <button class="audio-button audio-button-7" onclick="playSound('hello.wav')">hello</button>  
-</div>
 
-<audio id="audioPlayer" preload="auto">
-  <source src="" type="audio/wav">
-</audio>
+  </div>
+  <script src="script.js"></script>
 
-<script src="script.js"></script>
+<p>
+// xiaolaba, 2023/OCT/27<br>
+// START E:\2019-11-11_H_trip\DIY\TV\IR_remote_decoder\IR_decoder\IR_decoder.ino build from Oct 27 2023<br>
+// Using library version 4.1.0<br>
+// c-header file<br>
+// vcc=A5, IR_REC=A4, GND=A3<br>
+
+#define key_0001 0x00FF807F // 開/待機 Protocol=NEC Address=0x0 Command=0x1 Raw-Data=0xFE01FF00 32 bits LSB first<br>
+#define key_0002 0x00FF00FF // 溫度 -, Protocol=NEC Address=0x0 Command=0x0 Raw-Data=0xFF00FF00 32 bits LSB first<br>
+#define key_0003 0x00FF20DF // 溫度 +, Protocol=NEC Address=0x0 Command=0x4 Raw-Data=0xFB04FF00 32 bits LSB first<br>
+#define key_0004 0x00FF10EF // 搖頭, Protocol=NEC Address=0x0 Command=0x8 Raw-Data=0xF708FF00 32 bits LSB first<br>
+#define key_0005 0x00FFB04F // 檔位, Protocol=NEC Address=0x0 Command=0xD Raw-Data=0xF20DFF00 32 bits LSB first<br>
+#define key_0006 0x00FF906F // 定時, Protocol=NEC Address=0x0 Command=0x9 Raw-Data=0xF609FF00 32 bits LSB first<br>
+</p>
+
+
 
 
 </body>
