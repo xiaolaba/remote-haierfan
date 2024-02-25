@@ -13,7 +13,7 @@
   .audio-button {
     position: absolute;
     border-radius: 50%;
-    background-color: yellow; /* Change button color to green */
+    background-color: #66cc00; // green /* Change button color to green */
     width: 20px; /* Adjust button size */
     height: 20px; /* Adjust button size */
     border: none;
