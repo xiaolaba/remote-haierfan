@@ -25,6 +25,10 @@
     z-index: 1; /* Ensure buttons are above the image */
   }
 
+  .audio-button:hover {
+    background-color: #FFFF00; /* light yellow */
+  }
+
   /* Adjust the position of each button */
   .audio-button-1 {
     top: 80px;
